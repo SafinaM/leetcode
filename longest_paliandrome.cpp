@@ -56,7 +56,6 @@ public:
 				indexes.emplace(high - low, std::make_pair(high, low));
 			}
 
-
 			low = i;
 			high = i + 2;
 			if (high < s.size() && check(s, low, high)) {
@@ -67,7 +66,6 @@ public:
 			return s.substr(0, 1);
 		int high = indexes.rbegin()->second.first;
 		int low = indexes.rbegin()->second.second;
-
 
 		return s.substr(low, high - low + 1);
 	}
